@@ -1,0 +1,114 @@
+____________________________________________________**MIXED**________________________________
+
+				      Convert from decimal to binary 
+				      ------------------------------
+                                                            
+   long tobinary(int dno){
+                                         
+      long bno=0,rem,f=1;
+                                              
+      while(dno != 0){                                           
+         rem = dno % 2;                                          
+         bno = bno + rem * f;                                   
+         f = f * 10;                                            
+         dno = dno / 2;                                          
+      }                                                          
+     return bno;                                                
+   }                                   
+___________________________________________________________________________________ 
+				       Add serie of numbers from argument
+				       ----------------------------------
+#include <stdio.h>
+#include <stdlib.h> 
+int main(int argc, char **argv){
+  int i;
+  int sum=0;
+  int max;
+  if(argc < 2)
+    return 1;
+  max = strtol(argv[1],'\0',10);
+  for(i=1;i<=max;i++){
+    sum += i;
+  }
+  printf("%d + %d + %d + ... 3 + 2 + 1 = %d\n",max,max-1,max-2,sum);
+  return 0;
+}
+________________________________________________________________________________
+				       Example of a 2d array
+				       ---------------------------
+ int i,j;
+  int arr[11][11];
+  for(i=1;i<11;i++)//row
+    for(j=1;j<11;j++)//col
+      arr[i][j] = i*j;
+    
+  for(i=1;i<11;i++){//row
+    for(j=1;j<11;j++){//col
+      printf("%2d ",arr[i][j]);
+    }
+    puts("");
+  }
+______________________________________________________________________________-
+
+				command line argument -> max of fibbonaccisequence = print out
+				--------------------------------------------------------------
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc, char **argv)
+{
+    
+    if (argc < 2) {
+        return 1;
+    }
+    int n = strtol(argv[1],'\0',10);
+
+    static int f0 = 0;
+    static int f1 = 1;
+    printf("%d ", f0);
+    printf("%d ", f1);
+
+    for (int i = 2; i < n; i++) {
+        int f2 = f0 + f1;
+        printf("%d ", f2);
+        f0 = f1;
+        f1 = f2;
+    }
+
+    puts("");
+
+    return 0;
+}
+______________________________________________________________________________________________
+
+                                    Prime number can be changed to take userinput/argument
+                                    ------------------------------------------------------
+
+int is_prime(int);
+
+int main(int argc, char **argv){
+
+    for (int n = 2; n <= 10; n++)
+    {
+        
+        if (is_prime(n))
+        {
+            printf("%d is prime\n", n);
+        }
+    }
+
+    return 0;
+}
+
+int is_prime(int n){
+    for (int i = 2; i <= n / 2; i++)
+    {
+        if (n % i == 0)
+        {
+            return 0;
+        }
+    }
+    return 1;
+}
+___________________________________________________________________________

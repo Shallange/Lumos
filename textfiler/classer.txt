@@ -1,0 +1,94 @@
+______________________________________________________________**CLASSER**_________________________________________________________________________
+class Box{    		 #the fist letter in class name is always a captial letter                                                                                                                                 
+
+  string colour;         #by deafult the class mebers are private                                                                                                                           
+                                                                                                                                            
+ public:                 #everything after the public declaration is public                                                                                                                   
+  double weigth;                                                                                                                            
+  double heigth;                                                                                                                            
+                                                                                                                                            
+  void setcolor(string color){      #private members can still be used in the class and inside methods
+  				    #this refers to the objects name and sets the private member to the color value                                                                                                        
+    this->color = color;            #SETTER                                                                                                       
+                                                                                                                                            
+  };                                                                                                                                        
+  string getcolor(){                #to be able to print and use the private member u have a method that returns the color
+  		                    #GETTER                                                                                                       
+      return color;                                                                                                                          
+  };                                                                                                                                        
+};                                                                                                                                          
+ 
+box1.setcoluor("black"); #using the setter method and assigns the value of "black"
+
+"box 2 colour: "<< box2.getcolour();  #to print out the private member using a public GETTER method
+_______________________________________________________________________________________________________________________________
+                                          **CONSTRUCTOR AND DECONSTRUCTOR                                                                                      
+  class ExampleClass {
+  // attributes
+  int attribute1; 
+  string attribute2;                                                         
+                                                                         
+                                 #constructor has the same name as the class name, and takes arguments that
+ 			   	 #is used to assign to the class mebers declared above 
+  
+  // constructor
+  ExampleClass(int value1, string value2) {
+    attribute1 = value1;
+    attribute2 = value2;
+  }
+};
+---------------------------------------------------------------  
+  
+  ~Person(){                             #at the end of the class you have a destructor wich is similar to the constructor
+  					 #set  ~ infront of the name and no arguments 
+  					 #the deconstructor frees the memory                                                                                                  
+    cout<<"the memory is freed"<<endl;                                                                                                      
+  }  
+_____________________________________________________________________________________________________________________________-----
+  
+  class Student : public Person{       #the Person class inherits form the parent class Student                                                                                                      
+   int password;                                                                                                                            
+                                                                                                                                            
+}
+---------------------------------------
+  
+   virtual void print(){               #a virtual infront of a method in parent class makes it so that it can be ovwritten by childclass                                                                                                      
+    cout<<"parent print"<<endl;                                                                                                             
+  }                               
+  
+  
+  Parent *pchild;  #create a parent object that is a pointer                                                                                                                         
+  Child chi1;      #create an child object                                                                                                                         
+  pchild = &chi1;  #poinnt at the child object using parent pointer                                                                                                                         
+                                                                                                                                            
+  pchild->print();   #child print()                                                                                                                        
+  pchild->show();    #parent show()
+  
+  
+  #if you remove virtual 
+   both of them would have become parents methods
+_____________________________________________________________________________________________________________________________________
+  
+Here is an example of how public and private access specifiers can be used in a C++ class:
+________________________________________________________
+class ExampleClass {
+  // public members
+  public:
+    int public_attribute;
+    void public_method();
+  
+  // private members
+  private:
+    int private_attribute;
+    void private_method();
+};
+____________________________________________________________
+In the example above, the public_attribute and public_method can be accessed by any code outside of the ExampleClass class, 
+while the private_attribute and private_method can only be accessed by code within the ExampleClass class.
+
+It is generally good practice to declare class members as private by default, 
+and only make them public if they need to be accessed by code outside of the class. 
+This helps to prevent other code from directly modifying the internal state of the class, 
+which can lead to bugs and security vulnerabilities.
+
+  

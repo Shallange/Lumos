@@ -1,0 +1,13 @@
+__________________________________________________________________________________________________________
+                                       *TENAMEN*                                                          |
+                                                                                                          |
+Befinner du dig i mappen "tenta" då kan du skriva i powershell/Linux/mac terminalfönstret:                |
+                                                                                                          |
+cd ..                                                                                                     |
+                                                                                                          |
+scp -r tenta/* jimkro@77.53.56.197:                                                                       |
+	                                                                                                  |
+username ska ersätta med ditt username på Raspberry Pi och glöm inte kolumn tecken : efter ip addressen.  |
+                                                                                                          |
+Om du ser att alla filer är uppladdade 100% är du klart med tentamen.                                     |
+__________________________________________________________________________________________________________|

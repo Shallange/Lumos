@@ -1,0 +1,50 @@
+ FILE *fp;
+ char c; // ändra till int för raspberry pi
+ 
+____________________________________check if file exists__________________
+ 
+  fp = fopen("test.txt", "r");
+  if (fp == NULL) {
+    printf("Kunde inte öppna filen\n");
+    return 1;
+  }
+__________________________________Open A File And Read/Print Out_________________________ 
+
+fp = fopen("file.c","r");
+   while((c=getc(fp)) != EOF){
+   	printf("%c",c);
+  }
+  fclose(fp);
+____________________________________open and write from string array___________________________
+
+ char str[50]="This is some thext that will be written in file";
+  fp = fopen("Test","w");
+  fprintf(fp,"%s",str);
+  fclose(fp);
+  
+_____________________________________append to file___________________  
+   fp= fopen("Test","a");
+  fprintf(fp,"The end");
+  fclose(fp);
+
+_______________________________________läser av första raden eller 100 charaktärer_______________________________________________
+#include <stdio.h>
+
+int main(void) {
+  FILE *fp;
+  char str[100];
+
+  // Läs in en rad från filen och lagra den i str
+  fgets(str, 100, fp);
+  printf("Läste in: %s", str);
+
+  fclose(fp);
+  return 0;
+}
+_______________________________________________________________________________________--
+
+
+fp=fopen("file.c","a");
+
+fprintf(fp,"%d");
+fclose(fp);

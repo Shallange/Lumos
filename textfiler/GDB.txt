@@ -1,0 +1,22 @@
+___________________________________________________________________
+                       *Info about GDB*                            |
+                                                                   |
+  gcc -g program.c and then run gdb program                        |
+     b main : puts a breakpoint at the beginning of the program    |
+                                                                   |
+     b : puts a breakpoint at the current line                     |
+                                                                   |
+     r : runs the program                                          |
+                                                                   |
+     s : runs the next line of the program                         |
+                                                                   |
+     n : like s, but it does not step into functions               |
+                                                                   |
+     p var : prints the current value of the varieble "var"        |
+                                                                   |
+     list : print lines                                            |
+                                                                   |
+     info break : list all breakpoints                             |
+                                                                   |
+     q : quits GDB                                                 |
+___________________________________________________________________|     

@@ -1,0 +1,50 @@
+						            **STRINGS**
+_____________________________________________________________________________________________________________________
+(string.h) Libary:
+                                          
+   strlen : Get length of a arraystring by -> strlen(name of the array) //returns int excluding end
+   	    char.                                         
+ 
+   strcpy : Copies string -> strcpy(destination, source)       
+   	    strcpy(arr,"hej");                             
+   
+   strcmp : compares two strings returns int                   
+            int result = strcmp(str1, str2) ->  returns 0 if equal if not return.                                              
+   
+   strstr : strstr returns string(%s): strstr(haystack, needle)
+ 
+   strcat : adderar string med varandra   hej + då. strcat(str1, str2); destination, source
+--------------------------------------------------------------------------------------------------------------------  
+List/scanf in c:
+
+	char name[20];
+	scanf("%s", name);
+
+	När de är list då är det redan en adress då den pekar redan på
+	det första elementet. 
+	Därför skriver man inte '&' före name som man brukar göra med scanf.
+
+%s för string 
+%c för en char
+-------------------------------------------------------------------------------------------------------------------
+							**STRINGS IN C++**
+#include <string>    new c++ string class                                                                                                   
+#include <cstring>   old c-style        
+
+  string str1 = "string 1";                                                                                                                     
+  string str2 = "string 2";                                                                                                                      
+  string str3;   //tom                                                                                                                           
+                                                                                                                                            
+  str3 = str1+str2;                                                                                                                          
+                                                                                                                                            
+  cout<<str3<<endl; prints string1string2   
+___________________________________________
+char str[50];
+input to string
+
+cin >> str; // tar inte med efter mellanslag   så hello world hade sparats som hello;
+
+cin.get(str,50);  /tar med inclusive mellanslag så hello world hade sparats;
+
+
+

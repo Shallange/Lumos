@@ -1,0 +1,20 @@
+______________________________________________________________________
+                 *These are the help available:*                      |
+                  	                                              |
+	-h : Show this help                                           |
+       	                                                              |
+	-s : Info about strlen, strcpy, strcmp and c++ strings        |
+                                                                      |
+        -t : Uml                                                      |
+                                                                      |
+        -g : GDB commands                                             |
+                                                                      |
+        -d : Filled with mixed functions and solutions                |
+                                                                      |
+        -f : Functions as arguments                                   |
+                                                                      |
+        -b : Tentamen info for uploading to rasberry                  |
+      		                                                      |
+        -l : Classes in c++                                           |
+______________________________________________________________________|
+                                

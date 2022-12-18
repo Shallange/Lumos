@@ -1,0 +1,26 @@
+_____________________________________________________
+                      **UML**                        |
+                                                     |
+The "+" symbol indicates a public member             |
+the "-" symbol indicates a private member            |
+the "#" symbol indicates a protected member          |
+                                                     |
+                                                     |
+1      Exactly one                                   |
+                                                     |
+0..1   Zero or one                                   |
+                                                     |
+*      Zero or more                                  |
+                                                     |
+1..*   1 or more                                     |
+                                                     |
+{ordered}                                            |
+                                                     | 
+ ________________                                    |
+|___Classname____|                                   | 
+|-name: string	 |                                   |
+|+bankID : string|                                   |
+|-------------   |                                   | 
+|+test():void    |                                   |
+|________________|                                   |
+_____________________________________________________|

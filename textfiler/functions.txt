@@ -1,0 +1,7 @@
+int fun1(int)                                             
+declare fun2 without specific names     : int fun2(int(*)(int)int)                                                          
+call funtion            : printf("%d",fun2(fun1,a))    
+     
+define function that takes functions as an argument     : int fun2(int(*fun1)(int),int b)                                
+                
+  

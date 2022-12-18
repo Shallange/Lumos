@@ -1,0 +1,97 @@
+______________________________________________________**MALLOC**__________________________________________
+
+
+lista 
+	array blir en collection som är sparad vid  contiuos memory locations 
+	pekare pekar på första elementet i en array	
+__________________________________________________________________________________________________________________	
+	
+<stdlib.h> har malloc calloc free osv
+__________________________________________________________________________________________________________________	
+
+Malloc: 
+	malloc används mest 
+	
+	void *malloc(size_t size);
+	
+	
+	
+	char *message
+	
+	messsage = malloc(200*sizeof(char)); en char är 1byte  så de blir 200 charaktärer (200byte)
+	hade det varit int hade det blivit 200*8 bytes
+	
+	char *exempel                                                                                                                       
+  	exempel = malloc(10*sizeof(char));                                                                                                 
+  	**************malloc tillstruct**************                                                                                       
+     	struct Student *pstarr  create a pointer can also be int                                                                          
+     	pstarr=(struct Student*)malloc(100*sizeof(struct Student)) // if its int (int*)malloc                                            
+     	dont forget to  free(pstarr) at the end                                                                                            
+  
+     	*(pstarr) det som den pekar på                                                                                                    
+    	*(pstarr +i) = i*2
+__________________________________________________________________________________________________________________	
+
+Calloc: 	
+	lägger elemetn till 0 
+	så är endast användbart om du har en stor matris som innehåller för det mesta element med 0 
+	void *calloc(size_t n, size_t size);
+	 
+	size_t n är unsigned int size(all elements are init to 0;
+	långsammare än malloc
+	
+__________________________________________________________________________________________________________________	
+	
+Free:
+	void free(void *adress)
+		Sätter blocket till false och gör så att minnesblocket kan användas till annat, 
+		glöm inte att releasea allocated memory. 
+	
+		Garabage collection som görs automatiskt i highlevel språk.
+	
+__________________________________________________________________________________________________________________	
+						**Stuct Malloc
+int n = 10;
+
+struct Point* points = (struct Point*) malloc(n * sizeof(struct Point)); malloc for struct
+
+int* array = (int*) malloc(n * sizeof(int)); // malloc for array
+                                                                       
+struct  Student st1={"Dennis",32}
+                    
+struct Student *pst1     //is a pointer to type struct  
+pst1 = &st1              //assign pointer tostruct      
+ 
+printf("%s %d",(*pst1).name,(*pst1).age)      //prints out using pointers 
+                                                 
+printf("%s %d",pst1->name,pst1->age)         //easier way of printing                                                      
+                                                                     
+om de är en array/string i structen använd strcpy                                                       
+_________________________________________________________________________________________________________________- 
+ 
+                 
+
+arr[row][column]
+
+int *pbr
+
+pbr=(int*)malloc(100*sizeof(int));
+
+
+for(i=0;i<100;i++)
+	pbr[i] = i *2;
+	
+	det som prb pekar till 
+	*(pbr)
+	
+	*(pbr +i) = i*2;
+	
+
+	*(pbr +i))  istället för pbr[i]
+	
+
+
+
+ 
+                                                                                                           
+   
